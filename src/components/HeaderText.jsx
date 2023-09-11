@@ -1,13 +1,17 @@
-import React from "react";
 import "./styles/HeaderText.css";
+import React, { Component } from "react";
 
-const HeaderText = ({ text, data}) => {
-  return (
-    <div className="header">
+export class HeaderText extends Component {
+ state={}
+  render() {
+    const {text, data} = this.props.info;
+    return (
+      <div className="header">
         <p>{text}</p>
         <h1>{data}</h1>
-    </div>
-  )
-};
+      </div>
+    );
+  }
+}
 
 export default HeaderText;
